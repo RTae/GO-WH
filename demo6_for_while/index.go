@@ -8,6 +8,7 @@ func main() {
 	fnFor()
 	fmt.Println("")
 	fnWhile()
+	fnWhileUsingBreak()
 }
 
 func fnFor() {
@@ -20,6 +21,17 @@ func fnWhile() {
 	index := 0
 	for index < 5 {
 		index++
-		fmt.Printf("while-index %d\n", index)
+		fmt.Printf("index %d\n", index)
+	}
+}
+
+func fnWhileUsingBreak() {
+	index := 0
+	for true {
+		if index >= 5 {
+			break
+		}
+		index++
+		fmt.Printf("Why break index %d\n", index)
 	}
 }
